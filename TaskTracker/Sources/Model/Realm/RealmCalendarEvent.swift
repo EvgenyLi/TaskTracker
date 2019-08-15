@@ -6,10 +6,16 @@
 //  Copyright © 2019 Evgeny Lipadat. All rights reserved.
 //
 
-import Foundation
 import RealmSwift
 
-class CalendarEvent: Object {
+class RealmCalendarEvent: Object {
     @objc dynamic var eventName: String = ""
     @objc dynamic var isDone: Bool = false
+    
+    convenience init(eventName: String, isDone: Bool) {
+        self.init()
+        
+        self.eventName = eventName
+        self.isDone = isDone
+    }
 }

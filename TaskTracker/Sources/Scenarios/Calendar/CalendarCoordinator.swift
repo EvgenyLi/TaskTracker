@@ -10,6 +10,8 @@ import XCoordinator
 
 enum CalendarRoute: Route {
     case initial
+    case newEvent
+    case dismiss
 }
 final class CalendarCoordinator: NavigationCoordinator<CalendarRoute> {
     
@@ -21,7 +23,18 @@ final class CalendarCoordinator: NavigationCoordinator<CalendarRoute> {
         switch route {
         case .initial:
             let calendarViewController = CalendarViewController()
+            let viewModel = CalendarViewModel(router: anyRouter)
+            calendarViewController.bind(to: viewModel)
+            _ = viewModel.setup(with: calendarViewController.output)
             return .push(calendarViewController)
+        case .newEvent:
+            let eventViewController = EventViewController()
+            let viewModel = EventViewModel(router: anyRouter)
+            eventViewController.bind(to: viewModel)
+            _ = viewModel.setup(with: eventViewController.output)
+            return .present(eventViewController)
+        case .dismiss:
+            return .dismiss()
         }
     }
 }

@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+struct CalendarEvent {
+    var eventName: String
+    var isDone: Bool
+}

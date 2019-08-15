@@ -3,29 +3,106 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		280D4DDF22999B3C00F30EE2 /* BindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D4DDE22999B3C00F30EE2 /* BindableType.swift */; };
+		2847D5CB22989F2800339B66 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2847D5CA22989F2800339B66 /* CalendarViewModel.swift */; };
+		2847D5D22298A15800339B66 /* ModuleViewT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2847D5D12298A15800339B66 /* ModuleViewT.swift */; };
+		2847D5D42298A19300339B66 /* ModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2847D5D32298A19300339B66 /* ModuleViewModel.swift */; };
+		2860C79A2294523500BC81C5 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2860C7982294523500BC81C5 /* CalendarViewController.swift */; };
+		2860C79B2294523500BC81C5 /* CalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2860C7992294523500BC81C5 /* CalendarViewController.xib */; };
+		2860C79D22946D1A00BC81C5 /* CalendarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2860C79C22946D1A00BC81C5 /* CalendarCoordinator.swift */; };
+		2860C7A022946DA100BC81C5 /* TaskCounterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2860C79F22946DA100BC81C5 /* TaskCounterCoordinator.swift */; };
+		2860C7A322946E7900BC81C5 /* TaskCounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2860C7A122946E7900BC81C5 /* TaskCounterViewController.swift */; };
+		2860C7A422946E7900BC81C5 /* TaskCounterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2860C7A222946E7900BC81C5 /* TaskCounterViewController.xib */; };
+		28936F7F22CABB7700AF9B5C /* Router+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28936F7E22CABB7700AF9B5C /* Router+Rx.swift */; };
+		289470D922A8251100C5CB06 /* TaskCounterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289470D822A8251100C5CB06 /* TaskCounterViewModel.swift */; };
+		28A6B39922C9516E00559541 /* ModuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A6B39822C9516E00559541 /* ModuleView.swift */; };
+		28C68EAB22F4D29000B982BE /* RealmCalendarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C68EAA22F4D29000B982BE /* RealmCalendarEvent.swift */; };
+		28C68EAD22F4DEFD00B982BE /* CalendarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C68EAC22F4DEFD00B982BE /* CalendarEvent.swift */; };
+		28C68EB022F4DF6400B982BE /* CalendarEventMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C68EAF22F4DF6400B982BE /* CalendarEventMapper.swift */; };
 		28D1479622930CED00C0279B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D1479522930CED00C0279B /* AppDelegate.swift */; };
-		28D1479822930CED00C0279B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D1479722930CED00C0279B /* ViewController.swift */; };
-		28D1479B22930CED00C0279B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28D1479922930CED00C0279B /* Main.storyboard */; };
 		28D1479D22930CEE00C0279B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28D1479C22930CEE00C0279B /* Assets.xcassets */; };
 		28D147A022930CEE00C0279B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28D1479E22930CEE00C0279B /* LaunchScreen.storyboard */; };
+		28D147AC2293139200C0279B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D147AB2293139200C0279B /* AppCoordinator.swift */; };
+		28D147B02293206600C0279B /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D147AF2293206600C0279B /* MainCoordinator.swift */; };
+		28D6C8A622C781F2009D1813 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D6C8A422C781F2009D1813 /* EventViewController.swift */; };
+		28D6C8A722C781F2009D1813 /* EventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28D6C8A522C781F2009D1813 /* EventViewController.xib */; };
+		28D6C8A922C78211009D1813 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D6C8A822C78211009D1813 /* EventViewModel.swift */; };
+		28EF4D0822FCB60100BF9591 /* TaskTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EF4D0722FCB60100BF9591 /* TaskTrackerTests.swift */; };
+		28F02EB822DE7C7400BEEE92 /* RestAPITransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F02EB722DE7C7400BEEE92 /* RestAPITransport.swift */; };
+		28F02EBA22DE7C9D00BEEE92 /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F02EB922DE7C9D00BEEE92 /* DAO.swift */; };
+		28F02EBC22DE7CC600BEEE92 /* RestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F02EBB22DE7CC600BEEE92 /* RestAPI.swift */; };
+		28F02EBF22DE7D5200BEEE92 /* APIRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F02EBE22DE7D5200BEEE92 /* APIRequestBody.swift */; };
+		28F02EC222DE7D8600BEEE92 /* Problem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F02EC122DE7D8600BEEE92 /* Problem.swift */; };
+		28F02EC722DE817000BEEE92 /* ObservableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F02EC622DE817000BEEE92 /* ObservableExtension.swift */; };
+		91EB50C18C0193DC7331CEE3 /* Pods_TaskTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD9FF808FC75750B40EF7563 /* Pods_TaskTracker.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		28EF4D0A22FCB60100BF9591 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28D1478A22930CED00C0279B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28D1479122930CED00C0279B;
+			remoteInfo = TaskTracker;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		23A85171BF574FAB3C4E83B5 /* Pods-TaskTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaskTracker/Pods-TaskTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		280D4DDE22999B3C00F30EE2 /* BindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableType.swift; sourceTree = "<group>"; };
+		2847D5CA22989F2800339B66 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		2847D5D12298A15800339B66 /* ModuleViewT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleViewT.swift; sourceTree = "<group>"; };
+		2847D5D32298A19300339B66 /* ModuleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleViewModel.swift; sourceTree = "<group>"; };
+		2858C41B22BAC1AC00BCC1CD /* TaskTracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TaskTracker-Bridging-Header.h"; sourceTree = "<group>"; };
+		2860C7982294523500BC81C5 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		2860C7992294523500BC81C5 /* CalendarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarViewController.xib; sourceTree = "<group>"; };
+		2860C79C22946D1A00BC81C5 /* CalendarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCoordinator.swift; sourceTree = "<group>"; };
+		2860C79F22946DA100BC81C5 /* TaskCounterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCounterCoordinator.swift; sourceTree = "<group>"; };
+		2860C7A122946E7900BC81C5 /* TaskCounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCounterViewController.swift; sourceTree = "<group>"; };
+		2860C7A222946E7900BC81C5 /* TaskCounterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskCounterViewController.xib; sourceTree = "<group>"; };
+		28936F7E22CABB7700AF9B5C /* Router+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Router+Rx.swift"; sourceTree = "<group>"; };
+		289470D822A8251100C5CB06 /* TaskCounterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCounterViewModel.swift; sourceTree = "<group>"; };
+		28A6B39822C9516E00559541 /* ModuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleView.swift; sourceTree = "<group>"; };
+		28C68EAA22F4D29000B982BE /* RealmCalendarEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmCalendarEvent.swift; sourceTree = "<group>"; };
+		28C68EAC22F4DEFD00B982BE /* CalendarEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEvent.swift; sourceTree = "<group>"; };
+		28C68EAF22F4DF6400B982BE /* CalendarEventMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEventMapper.swift; sourceTree = "<group>"; };
 		28D1479222930CED00C0279B /* TaskTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28D1479522930CED00C0279B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		28D1479722930CED00C0279B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		28D1479A22930CED00C0279B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		28D1479C22930CEE00C0279B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28D1479F22930CEE00C0279B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28D147A122930CEE00C0279B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28D147AB2293139200C0279B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		28D147AF2293206600C0279B /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		28D6C8A422C781F2009D1813 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		28D6C8A522C781F2009D1813 /* EventViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventViewController.xib; sourceTree = "<group>"; };
+		28D6C8A822C78211009D1813 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
+		28EF4D0522FCB60100BF9591 /* TaskTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaskTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		28EF4D0722FCB60100BF9591 /* TaskTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTrackerTests.swift; sourceTree = "<group>"; };
+		28EF4D0922FCB60100BF9591 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28F02EB722DE7C7400BEEE92 /* RestAPITransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPITransport.swift; sourceTree = "<group>"; };
+		28F02EB922DE7C9D00BEEE92 /* DAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
+		28F02EBB22DE7CC600BEEE92 /* RestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPI.swift; sourceTree = "<group>"; };
+		28F02EBE22DE7D5200BEEE92 /* APIRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestBody.swift; sourceTree = "<group>"; };
+		28F02EC122DE7D8600BEEE92 /* Problem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem.swift; sourceTree = "<group>"; };
+		28F02EC622DE817000BEEE92 /* ObservableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableExtension.swift; sourceTree = "<group>"; };
+		E37054AD2CA47895E579B125 /* Pods-TaskTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-TaskTracker/Pods-TaskTracker.release.xcconfig"; sourceTree = "<group>"; };
+		FD9FF808FC75750B40EF7563 /* Pods_TaskTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaskTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		28D1478F22930CED00C0279B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91EB50C18C0193DC7331CEE3 /* Pods_TaskTracker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28EF4D0222FCB60100BF9591 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,11 +112,113 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		280D4DDD22999B2F00F30EE2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				280D4DDE22999B3C00F30EE2 /* BindableType.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		2847D5CC2298A10700339B66 /* Architecture */ = {
+			isa = PBXGroup;
+			children = (
+				2847D5CE2298A12E00339B66 /* UIModule */,
+				2847D5CD2298A11F00339B66 /* Error */,
+			);
+			path = Architecture;
+			sourceTree = "<group>";
+		};
+		2847D5CD2298A11F00339B66 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		2847D5CE2298A12E00339B66 /* UIModule */ = {
+			isa = PBXGroup;
+			children = (
+				280D4DDD22999B2F00F30EE2 /* Utils */,
+				2847D5D02298A14600339B66 /* View */,
+				2847D5CF2298A13C00339B66 /* ViewModel */,
+			);
+			path = UIModule;
+			sourceTree = "<group>";
+		};
+		2847D5CF2298A13C00339B66 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2847D5D32298A19300339B66 /* ModuleViewModel.swift */,
+				28A6B39822C9516E00559541 /* ModuleView.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2847D5D02298A14600339B66 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2847D5D12298A15800339B66 /* ModuleViewT.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2860C7972294520900BC81C5 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				28D6C8A322C7819F009D1813 /* EventViewController */,
+				2860C7982294523500BC81C5 /* CalendarViewController.swift */,
+				2860C7992294523500BC81C5 /* CalendarViewController.xib */,
+				2860C79C22946D1A00BC81C5 /* CalendarCoordinator.swift */,
+				2847D5CA22989F2800339B66 /* CalendarViewModel.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		2860C79E22946D8D00BC81C5 /* TaskCounter */ = {
+			isa = PBXGroup;
+			children = (
+				2860C79F22946DA100BC81C5 /* TaskCounterCoordinator.swift */,
+				2860C7A122946E7900BC81C5 /* TaskCounterViewController.swift */,
+				2860C7A222946E7900BC81C5 /* TaskCounterViewController.xib */,
+				289470D822A8251100C5CB06 /* TaskCounterViewModel.swift */,
+			);
+			path = TaskCounter;
+			sourceTree = "<group>";
+		};
+		28936F7D22CABB6300AF9B5C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				28936F7E22CABB7700AF9B5C /* Router+Rx.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		28C68EA922F4CF2B00B982BE /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				28C68EAA22F4D29000B982BE /* RealmCalendarEvent.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		28C68EAE22F4DF2E00B982BE /* Transformation */ = {
+			isa = PBXGroup;
+			children = (
+				28C68EAF22F4DF6400B982BE /* CalendarEventMapper.swift */,
+			);
+			path = Transformation;
+			sourceTree = "<group>";
+		};
 		28D1478922930CED00C0279B = {
 			isa = PBXGroup;
 			children = (
+				2858C41B22BAC1AC00BCC1CD /* TaskTracker-Bridging-Header.h */,
 				28D1479422930CED00C0279B /* TaskTracker */,
+				28EF4D0622FCB60100BF9591 /* TaskTrackerTests */,
 				28D1479322930CED00C0279B /* Products */,
+				9562DFF57DD1096EC74B556F /* Pods */,
+				68F46C1BB8EB2A162BFCAE64 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -47,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				28D1479222930CED00C0279B /* TaskTracker.app */,
+				28EF4D0522FCB60100BF9591 /* TaskTrackerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,14 +234,175 @@
 		28D1479422930CED00C0279B /* TaskTracker */ = {
 			isa = PBXGroup;
 			children = (
-				28D1479522930CED00C0279B /* AppDelegate.swift */,
-				28D1479722930CED00C0279B /* ViewController.swift */,
-				28D1479922930CED00C0279B /* Main.storyboard */,
-				28D1479C22930CEE00C0279B /* Assets.xcassets */,
-				28D1479E22930CEE00C0279B /* LaunchScreen.storyboard */,
-				28D147A122930CEE00C0279B /* Info.plist */,
+				28D147A9229311B400C0279B /* Sources */,
+				28D147A82293119500C0279B /* Supporting Files */,
+				28D147A72293117200C0279B /* Resources */,
 			);
 			path = TaskTracker;
+			sourceTree = "<group>";
+		};
+		28D147A72293117200C0279B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				28D1479C22930CEE00C0279B /* Assets.xcassets */,
+				28D1479E22930CEE00C0279B /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		28D147A82293119500C0279B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				28D147A122930CEE00C0279B /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		28D147A9229311B400C0279B /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				28C68EAE22F4DF2E00B982BE /* Transformation */,
+				28F02EC422DE814F00BEEE92 /* Misc */,
+				28F02EB622DE7C3B00BEEE92 /* Service */,
+				28F02EB522DE7C2F00BEEE92 /* Transport */,
+				28F02EB422DE7C1800BEEE92 /* Model */,
+				28936F7D22CABB6300AF9B5C /* Extensions */,
+				2847D5CC2298A10700339B66 /* Architecture */,
+				28D147AD229313B100C0279B /* Scenarios */,
+				28D147AA2293136D00C0279B /* App */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		28D147AA2293136D00C0279B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				28D1479522930CED00C0279B /* AppDelegate.swift */,
+				28D147AB2293139200C0279B /* AppCoordinator.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		28D147AD229313B100C0279B /* Scenarios */ = {
+			isa = PBXGroup;
+			children = (
+				2860C79E22946D8D00BC81C5 /* TaskCounter */,
+				2860C7972294520900BC81C5 /* Calendar */,
+				28D147AE2293205100C0279B /* Main */,
+			);
+			path = Scenarios;
+			sourceTree = "<group>";
+		};
+		28D147AE2293205100C0279B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				28D147AF2293206600C0279B /* MainCoordinator.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		28D6C8A322C7819F009D1813 /* EventViewController */ = {
+			isa = PBXGroup;
+			children = (
+				28D6C8A422C781F2009D1813 /* EventViewController.swift */,
+				28D6C8A522C781F2009D1813 /* EventViewController.xib */,
+				28D6C8A822C78211009D1813 /* EventViewModel.swift */,
+			);
+			path = EventViewController;
+			sourceTree = "<group>";
+		};
+		28EF4D0622FCB60100BF9591 /* TaskTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				28EF4D0722FCB60100BF9591 /* TaskTrackerTests.swift */,
+				28EF4D0922FCB60100BF9591 /* Info.plist */,
+			);
+			path = TaskTrackerTests;
+			sourceTree = "<group>";
+		};
+		28F02EB422DE7C1800BEEE92 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				28C68EA922F4CF2B00B982BE /* Realm */,
+				28F02EC322DE7D9D00BEEE92 /* Entity */,
+				28F02EC022DE7D7700BEEE92 /* Error */,
+				28F02EBD22DE7D3C00BEEE92 /* RequestBody */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		28F02EB522DE7C2F00BEEE92 /* Transport */ = {
+			isa = PBXGroup;
+			children = (
+				28F02EB722DE7C7400BEEE92 /* RestAPITransport.swift */,
+				28F02EB922DE7C9D00BEEE92 /* DAO.swift */,
+			);
+			path = Transport;
+			sourceTree = "<group>";
+		};
+		28F02EB622DE7C3B00BEEE92 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				28F02EBB22DE7CC600BEEE92 /* RestAPI.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		28F02EBD22DE7D3C00BEEE92 /* RequestBody */ = {
+			isa = PBXGroup;
+			children = (
+				28F02EBE22DE7D5200BEEE92 /* APIRequestBody.swift */,
+			);
+			path = RequestBody;
+			sourceTree = "<group>";
+		};
+		28F02EC022DE7D7700BEEE92 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				28F02EC122DE7D8600BEEE92 /* Problem.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		28F02EC322DE7D9D00BEEE92 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				28C68EAC22F4DEFD00B982BE /* CalendarEvent.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		28F02EC422DE814F00BEEE92 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				28F02EC522DE816300BEEE92 /* Reactive */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		28F02EC522DE816300BEEE92 /* Reactive */ = {
+			isa = PBXGroup;
+			children = (
+				28F02EC622DE817000BEEE92 /* ObservableExtension.swift */,
+			);
+			path = Reactive;
+			sourceTree = "<group>";
+		};
+		68F46C1BB8EB2A162BFCAE64 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD9FF808FC75750B40EF7563 /* Pods_TaskTracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9562DFF57DD1096EC74B556F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				23A85171BF574FAB3C4E83B5 /* Pods-TaskTracker.debug.xcconfig */,
+				E37054AD2CA47895E579B125 /* Pods-TaskTracker.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +412,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 28D147A422930CEE00C0279B /* Build configuration list for PBXNativeTarget "TaskTracker" */;
 			buildPhases = (
+				36B973AEAAB4B014E781C358 /* [CP] Check Pods Manifest.lock */,
 				28D1478E22930CED00C0279B /* Sources */,
 				28D1478F22930CED00C0279B /* Frameworks */,
 				28D1479022930CED00C0279B /* Resources */,
+				EDADF30B81DC24CD32DEA475 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -83,6 +426,24 @@
 			productName = TaskTracker;
 			productReference = 28D1479222930CED00C0279B /* TaskTracker.app */;
 			productType = "com.apple.product-type.application";
+		};
+		28EF4D0422FCB60100BF9591 /* TaskTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28EF4D0E22FCB60100BF9591 /* Build configuration list for PBXNativeTarget "TaskTrackerTests" */;
+			buildPhases = (
+				28EF4D0122FCB60100BF9591 /* Sources */,
+				28EF4D0222FCB60100BF9591 /* Frameworks */,
+				28EF4D0322FCB60100BF9591 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28EF4D0B22FCB60100BF9591 /* PBXTargetDependency */,
+			);
+			name = TaskTrackerTests;
+			productName = TaskTrackerTests;
+			productReference = 28EF4D0522FCB60100BF9591 /* TaskTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -96,6 +457,10 @@
 				TargetAttributes = {
 					28D1479122930CED00C0279B = {
 						CreatedOnToolsVersion = 10.2;
+					};
+					28EF4D0422FCB60100BF9591 = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 28D1479122930CED00C0279B;
 					};
 				};
 			};
@@ -113,6 +478,7 @@
 			projectRoot = "";
 			targets = (
 				28D1479122930CED00C0279B /* TaskTracker */,
+				28EF4D0422FCB60100BF9591 /* TaskTrackerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -122,35 +488,117 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2860C79B2294523500BC81C5 /* CalendarViewController.xib in Resources */,
+				28D6C8A722C781F2009D1813 /* EventViewController.xib in Resources */,
+				2860C7A422946E7900BC81C5 /* TaskCounterViewController.xib in Resources */,
 				28D147A022930CEE00C0279B /* LaunchScreen.storyboard in Resources */,
 				28D1479D22930CEE00C0279B /* Assets.xcassets in Resources */,
-				28D1479B22930CED00C0279B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28EF4D0322FCB60100BF9591 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		36B973AEAAB4B014E781C358 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TaskTracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDADF30B81DC24CD32DEA475 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TaskTracker/Pods-TaskTracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TaskTracker/Pods-TaskTracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TaskTracker/Pods-TaskTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		28D1478E22930CED00C0279B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28D1479822930CED00C0279B /* ViewController.swift in Sources */,
+				28936F7F22CABB7700AF9B5C /* Router+Rx.swift in Sources */,
+				28C68EAB22F4D29000B982BE /* RealmCalendarEvent.swift in Sources */,
+				289470D922A8251100C5CB06 /* TaskCounterViewModel.swift in Sources */,
+				2860C79A2294523500BC81C5 /* CalendarViewController.swift in Sources */,
+				28F02EB822DE7C7400BEEE92 /* RestAPITransport.swift in Sources */,
+				28F02EBF22DE7D5200BEEE92 /* APIRequestBody.swift in Sources */,
+				28D6C8A622C781F2009D1813 /* EventViewController.swift in Sources */,
+				28D147AC2293139200C0279B /* AppCoordinator.swift in Sources */,
+				28F02EC222DE7D8600BEEE92 /* Problem.swift in Sources */,
+				2860C79D22946D1A00BC81C5 /* CalendarCoordinator.swift in Sources */,
+				28C68EB022F4DF6400B982BE /* CalendarEventMapper.swift in Sources */,
+				28C68EAD22F4DEFD00B982BE /* CalendarEvent.swift in Sources */,
+				28D6C8A922C78211009D1813 /* EventViewModel.swift in Sources */,
+				2847D5CB22989F2800339B66 /* CalendarViewModel.swift in Sources */,
+				280D4DDF22999B3C00F30EE2 /* BindableType.swift in Sources */,
+				28F02EC722DE817000BEEE92 /* ObservableExtension.swift in Sources */,
+				2860C7A322946E7900BC81C5 /* TaskCounterViewController.swift in Sources */,
+				28D147B02293206600C0279B /* MainCoordinator.swift in Sources */,
+				28F02EBA22DE7C9D00BEEE92 /* DAO.swift in Sources */,
+				28F02EBC22DE7CC600BEEE92 /* RestAPI.swift in Sources */,
 				28D1479622930CED00C0279B /* AppDelegate.swift in Sources */,
+				2860C7A022946DA100BC81C5 /* TaskCounterCoordinator.swift in Sources */,
+				2847D5D42298A19300339B66 /* ModuleViewModel.swift in Sources */,
+				28A6B39922C9516E00559541 /* ModuleView.swift in Sources */,
+				2847D5D22298A15800339B66 /* ModuleViewT.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28EF4D0122FCB60100BF9591 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28EF4D0822FCB60100BF9591 /* TaskTrackerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		28D1479922930CED00C0279B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				28D1479A22930CED00C0279B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		28EF4D0B22FCB60100BF9591 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28D1479122930CED00C0279B /* TaskTracker */;
+			targetProxy = 28EF4D0A22FCB60100BF9591 /* PBXContainerItemProxy */;
 		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
 		28D1479E22930CEE00C0279B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -280,17 +728,19 @@
 		};
 		28D147A522930CEE00C0279B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23A85171BF574FAB3C4E83B5 /* Pods-TaskTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BBW35UX6RA;
-				INFOPLIST_FILE = TaskTracker/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TaskTracker/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Lipadat.TaskTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TaskTracker-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -298,19 +748,61 @@
 		};
 		28D147A622930CEE00C0279B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E37054AD2CA47895E579B125 /* Pods-TaskTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BBW35UX6RA;
-				INFOPLIST_FILE = TaskTracker/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TaskTracker/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Lipadat.TaskTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TaskTracker-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		28EF4D0C22FCB60100BF9591 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BBW35UX6RA;
+				INFOPLIST_FILE = TaskTrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Lipadat.TaskTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaskTracker.app/TaskTracker";
+			};
+			name = Debug;
+		};
+		28EF4D0D22FCB60100BF9591 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BBW35UX6RA;
+				INFOPLIST_FILE = TaskTrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Lipadat.TaskTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaskTracker.app/TaskTracker";
 			};
 			name = Release;
 		};
@@ -331,6 +823,15 @@
 			buildConfigurations = (
 				28D147A522930CEE00C0279B /* Debug */,
 				28D147A622930CEE00C0279B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28EF4D0E22FCB60100BF9591 /* Build configuration list for PBXNativeTarget "TaskTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28EF4D0C22FCB60100BF9591 /* Debug */,
+				28EF4D0D22FCB60100BF9591 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

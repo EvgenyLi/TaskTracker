@@ -6,4 +6,15 @@
 //  Copyright © 2019 Evgeny Lipadat. All rights reserved.
 //
 
-import Foundation
+import RealmSwift
+
+class CalendarEventMapper {
+    
+    static func map(from realm: RealmCalendarEvent) -> CalendarEvent {
+        return CalendarEvent(eventName: realm.eventName, isDone: realm.isDone)
+    }
+    
+    static func map(from entity: CalendarEvent) -> RealmCalendarEvent {
+        return RealmCalendarEvent(eventName: entity.eventName, isDone: entity.isDone)
+    }
+}

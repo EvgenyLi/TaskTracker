@@ -8,4 +8,23 @@
 
 import XCoordinator
 
+enum TaskCounterRoute: Route {
+    case initial
+}
 
+final class TaskCounterCoordinator: NavigationCoordinator<TaskCounterRoute> {
+    
+    init() {
+        super.init(initialRoute: .initial)
+    }
+    
+    override func prepareTransition(for route: TaskCounterRoute) -> NavigationTransition {
+        switch route {
+        case .initial:
+            let taskCounterViewController = TaskCounterViewController()
+            let viewModel = TaskCounterViewModel(router: anyRouter)
+            taskCounterViewController.bind(to: viewModel)
+            return .push(taskCounterViewController)
+        }
+    }
+}

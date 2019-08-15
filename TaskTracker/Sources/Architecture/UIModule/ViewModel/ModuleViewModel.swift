@@ -6,4 +6,12 @@
 //  Copyright © 2019 Evgeny Lipadat. All rights reserved.
 //
 
-import Foundation
+import RxSwift
+
+public protocol ModuleViewModel: class {
+    
+    associatedtype Input
+    
+    func setup(with input: Input) -> Disposable
+
+}

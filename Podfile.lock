@@ -1,0 +1,62 @@
+PODS:
+  - Alamofire (5.0.0-beta.6)
+  - FSCalendar (2.8.0)
+  - Realm (3.16.1):
+    - Realm/Headers (= 3.16.1)
+  - Realm/Headers (3.16.1)
+  - RealmSwift (3.16.1):
+    - Realm (= 3.16.1)
+  - RxCocoa (5.0.0):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxFeedback (3.0.0):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxRelay (5.0.0):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.0)
+  - RxTest (5.0.0):
+    - RxSwift (~> 5)
+  - XCoordinator (1.5.0):
+    - XCoordinator/Core (= 1.5.0)
+  - XCoordinator/Core (1.5.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.0.0-beta.5)
+  - FSCalendar
+  - Realm
+  - RealmSwift
+  - RxCocoa (~> 5)
+  - RxFeedback (~> 3.0)
+  - RxSwift (~> 5)
+  - RxTest
+  - XCoordinator (~> 1.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - FSCalendar
+    - Realm
+    - RealmSwift
+    - RxCocoa
+    - RxFeedback
+    - RxRelay
+    - RxSwift
+    - RxTest
+    - XCoordinator
+
+SPEC CHECKSUMS:
+  Alamofire: cd08a4402bd12cacd0c66f23fb12fec8d6b965e4
+  FSCalendar: 3a5ed3636e2ba1b83ebebfcf0c2603105a6f5efe
+  Realm: 601cacc51d8be3b17a377ef787be0f6ee0e76cf1
+  RealmSwift: 486f2e09d5a8ccff63ed66e48d0846b111deb5e5
+  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
+  RxFeedback: 4260d8dad5bba28b182c0b9ff5bce68c260de183
+  RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
+  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+  RxTest: 4349afe98f564e0a9bc19063368904622d17d49a
+  XCoordinator: 4cb9530e886ecb5ad8c448361c60950fe49451c2
+
+PODFILE CHECKSUM: 359bfe88d8f45a01270c1470826469d4e65e8ad9
+
+COCOAPODS: 1.7.2
