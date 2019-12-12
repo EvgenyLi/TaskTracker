@@ -11,7 +11,6 @@ import XCoordinator
 import RxSwift
 import FSCalendar
 
-
 class CalendarViewController: UIViewController, UIGestureRecognizerDelegate, BindableType {
 
     // MARK: IBOutlets
@@ -20,6 +19,8 @@ class CalendarViewController: UIViewController, UIGestureRecognizerDelegate, Bin
     @IBOutlet weak var calendarHeightConstraint: NSLayoutConstraint!
     
      // MARK: Private
+    private var event = CalendarEvent(eventName: "", isDone: true)
+    private var realmEvents: [RealmCalendarEvent] = []
     private var tasks: [String: [RealmCalendarEvent]] = [:]
     private let disposeBag = DisposeBag()
 
@@ -129,6 +130,13 @@ extension CalendarViewController: FSCalendarDataSource, FSCalendarDelegate {
             calendar.setCurrentPage(date, animated: true)
         }
         
+
+//
+//        DAO().saveData(entities: tasks) { task -> RealmCalendarEvent in
+//            return CalendarEventMapper.map(from: event)
+//        }
+        
+        
 //        DAO().saveData(entities: CalendarEvent) { calendarEvent -> RealmCalendarEvent in
 //            return CalendarEventMapper.map(from: calendarEvent)
 //        }
@@ -140,6 +148,17 @@ extension CalendarViewController: FSCalendarDataSource, FSCalendarDelegate {
 //            self.tableView.reloadData()
 //        }
         tableView.reloadData()
+    }
+    
+    func newEvent(_ event: CalendarEvent) {
+        self.event = event
+        
+        if !self.event.eventName.isEmpty {
+            let realmEvent = CalendarEventMapper.map(from: event)
+            let date = self.dateFormatter.string(from: Date())
+            realmEvents.append(realmEvent)
+            tasks = [date: realmEvents]
+        }
     }
     
     func calendarCurrentPageDidChange(_ calendar: FSCalendar) {

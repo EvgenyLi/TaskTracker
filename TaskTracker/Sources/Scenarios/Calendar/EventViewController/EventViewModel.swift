@@ -12,8 +12,7 @@ import XCoordinator
 
 class EventViewModel: ModuleViewModel {
     
-   // private let dao = DAO()
-    
+    // MARK: - Dependencies
     let router: AnyRouter<CalendarRoute>
     
     init(router: AnyRouter<CalendarRoute>) {
@@ -23,6 +22,9 @@ class EventViewModel: ModuleViewModel {
     // MARK: - ModuleViewModel
     struct Input {
         let doneButtonTapped: Signal<Void>
+        let minusTapped: Signal<Void>
+        let plusTapped: Signal<Void>
+        let recognizer: Signal<UISwipeGestureRecognizer>
     }
     
     func setup(with input: EventViewModel.Input) -> Disposable {
@@ -32,15 +34,33 @@ class EventViewModel: ModuleViewModel {
                 guard let self = self else { return .empty() }
                 return self.router.rx.trigger(.dismiss)
             }
-            .subscribe()
+            .subscribe(),
+        input.minusTapped.asObservable()
+            .withLatestFrom(counterRelay.asObservable())
+            .map { $0 - 1 }
+            .bind(to: counterRelay),
+        input.plusTapped.asObservable()
+            .withLatestFrom(counterRelay.asObservable())
+            .map { $0 + 1 }
+            .bind(to: counterRelay),
+        input.recognizer.asObservable()
+            .flatMapLatest { recognizer -> Observable<Int> in
+                switch recognizer.direction {
+                    case .left: return .just(self.counterRelay.value + 1)
+                    case .right: return .just(self.counterRelay.value - 1)
+                    default: return .just(self.counterRelay.value)
+                }
+            }
+            .bind(to: counterRelay)
             ])
     }
     
     // MARK: - Public
-//    var doneTapped: Observable<Completable> {
-//     //   return doneRelay.asObservable().map { _ in self.router.rx.trigger(.dismiss) }
-//    }
+    var counterLabel: Driver<String> {
+        return counterRelay.map { String($0) }.asDriver(onErrorJustReturn: "0")
+    }
     
     // MARK: - Private
-    let disposeBag = DisposeBag()
+    private let counterRelay = BehaviorRelay<Int>(value: 0)
+    private let disposeBag = DisposeBag()
 }

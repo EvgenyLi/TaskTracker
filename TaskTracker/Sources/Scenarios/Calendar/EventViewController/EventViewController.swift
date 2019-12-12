@@ -9,29 +9,8 @@
 import UIKit
 import RxCocoa
 import RxSwift
-import RxFeedback
 
-fileprivate enum Event {
-    case increment
-    case decrement
-}
 
-fileprivate enum State {
-    case one
-    case two
-}
-
-extension State {
-    
-    static func reduce(state: State, event: Event) -> State {
-        switch event {
-        case .increment:
-            return .one
-        case .decrement:
-            return .two
-        }
-    }
-}
 
 class EventViewController: UIViewController, BindableType {
     
@@ -47,22 +26,31 @@ class EventViewController: UIViewController, BindableType {
     // MARK: - BindableType
     var output: EventViewModel.Input {
         return EventViewModel.Input(
-            doneButtonTapped: doneButton.rx.tap.asSignal()
+            doneButtonTapped: doneButton.rx.tap.asSignal(),
+            minusTapped: minus.rx.tap.asSignal(),
+            plusTapped: plus.rx.tap.asSignal(),
+            recognizer: recognizer.asSignal()
         )
     }
     
     func bindViewModel(to viewModel: EventViewModel) -> Disposable {
-        return Disposables.create()
+        return Disposables.create([viewModel.counterLabel.drive(label.rx.text)])
     }
     
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
+        setupRecognizer()
     }
     
     // MARK: - Private
     private var disposeBag = DisposeBag()
+    private var recognizer = PublishRelay<UISwipeGestureRecognizer>()
+    
+    private func setupRecognizer() {
+        let swipe = UISwipeGestureRecognizer()
+        self.view.addGestureRecognizer(swipe)
+        _ = swipe.rx.event.bind(to: recognizer)
+    }
 }

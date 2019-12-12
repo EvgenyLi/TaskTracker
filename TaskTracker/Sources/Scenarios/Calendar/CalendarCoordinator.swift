@@ -26,6 +26,7 @@ final class CalendarCoordinator: NavigationCoordinator<CalendarRoute> {
             let viewModel = CalendarViewModel(router: anyRouter)
             calendarViewController.bind(to: viewModel)
             _ = viewModel.setup(with: calendarViewController.output)
+            if !event.eventName.isEmpty { calendarViewController.newEvent(self.event) }
             return .push(calendarViewController)
         case .newEvent:
             let eventViewController = EventViewController()
@@ -34,7 +35,10 @@ final class CalendarCoordinator: NavigationCoordinator<CalendarRoute> {
             _ = viewModel.setup(with: eventViewController.output)
             return .present(eventViewController)
         case .dismiss:
+           // self.event = event
             return .dismiss()
         }
     }
+    
+    private var event = CalendarEvent(eventName: "", isDone: true)
 }

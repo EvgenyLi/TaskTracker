@@ -63,6 +63,31 @@ class DAO {
         }
     }
     
+    func saveData<E: Object>(entities: E) -> Observable<Void> {
+        return Observable.create { observer in
+            guard let realm = try? Realm(configuration: DAO.realmConfiguration) else {
+                observer.onError(Problem())
+                return Disposables.create()
+            }
+            
+            let objects = entities
+            
+            do {
+                try realm.write{
+                    realm.add(objects, update: .all)
+                }
+                
+                observer.onNext(Void())
+                observer.onCompleted()
+            }
+            catch _ {
+                observer.onError(Problem())
+            }
+            
+            return Disposables.create()
+            }
+        }
+    
     func deleteData<R: Object>(realmType: R.Type, filter: NSPredicate? = nil) -> Observable<Void> {
         return Observable.create { observer in
             
