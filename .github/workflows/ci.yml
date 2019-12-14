@@ -8,8 +8,8 @@ jobs:
     runs-on: macOS-latest
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@master
     - name: Build
-      run: xcodebuild -project 'TaskTracker.xcodeproj' -scheme 'TaskTracker' -destination 'generic/platform=iOS' configuration Debug build CODE_SIGNING_ALLOWED=NO
+      run: xcodebuild -project 'TaskTracker.xcodeproj' -scheme 'TaskTracker' -destination 'generic/platform=iOS'
     - name: Run tests
       run: xcodebuild -project 'TaskTracker.xcodeproj' -scheme 'TaskTracker' -destination 'platform=iOS Simulator,name=iPhone 11' test
