@@ -9,7 +9,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@master
-    - name: Build
-      run: xcodebuild -project 'TaskTracker.xcodeproj' -scheme 'TaskTracker' -destination 'generic/platform=iOS'
     - name: Run tests
       run: xcodebuild -project 'TaskTracker.xcodeproj' -scheme 'TaskTracker' -destination 'platform=iOS Simulator,name=iPhone 11' test
+    - name: Build
+      run: xcodebuild -project 'TaskTracker.xcodeproj' -scheme 'TaskTracker' -destination 'generic/platform=iOS' -configuration Release build CODE_SIGNING_ALLOWED=NO
