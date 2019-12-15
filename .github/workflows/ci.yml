@@ -1,12 +1,10 @@
-name: Swift
+name: CI
 
-on:
-  push:
-    branches: 
-      - "actions/*"
+on: [push]
+
 jobs:
-  test:
-    name: Unit tests
+  build:
+    
     runs-on: macOS-latest
 
     steps:
