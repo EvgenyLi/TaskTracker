@@ -16,7 +16,7 @@ class TaskTrackerTests: XCTestCase {
     }
 
     func testExample() {
-        
+        print("test")
     }
 
 }
