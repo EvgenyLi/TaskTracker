@@ -17,7 +17,24 @@ default_platform(:ios)
 
 platform :ios do
   desc "Description of what the lane does"
-  lane :run_tests do
-    ensure_git_status_clean
+
+  lane :_run do
+  clear_derived_data
+  xcclean(
+	scheme: "TaskTracker",
+	workspace: "TaskTracker.xcworkspace"
+)
+  cocoapods(use_bundle_exec: false, try_repo_update_on_error: true)
+  scan(
+    	scheme: "TaskTracker",
+    	device: "iPhone 11",
+    	disable_concurrent_testing: true,
+    	suppress_xcode_output: false,
+    	reset_simulator: false,
+    	prelaunch_simulator: true,
+    	clean: false,
+    	output_directory: './output/xcov',
+    	only_testing: 'TaskTrackerTests'
+  )
   end
 end

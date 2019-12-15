@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='TaskTrackerTests.xctest' tests='1' failures='0'>
+  <testsuite name='TaskTrackerTests.TaskTrackerTests' tests='1' failures='0'>
+    <testcase classname='TaskTrackerTests.TaskTrackerTests' name='testExample' time='0.001'/>
+  </testsuite>
+</testsuites>
