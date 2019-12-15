@@ -1,15 +1,20 @@
 name: Swift
 
-on: [push]
-
+on:
+  push:
+    branches: 
+      - "actions/*"
 jobs:
-  build:
-
+  test:
+    name: Unit tests
     runs-on: macOS-latest
 
     steps:
-    - uses: actions/checkout@master
-    - name: Run tests
-      run: xcodebuild -project 'TaskTracker.xcodeproj' -scheme 'TaskTracker' -destination 'platform=iOS Simulator,name=iPhone 11' test
-    - name: Build
-      run: fastlane ios _run
+    - name: Checkout current branch
+      uses: actions/checkout@master
+    - name: Install gems
+      run: bundle install
+    - name: Select Xcode
+      run: xcversion select --symlink 11.0
+    - name: Build app and run unit tests
+      run: bundle exec fastlane beta _run
