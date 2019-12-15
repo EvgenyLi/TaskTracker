@@ -18,5 +18,9 @@ class TaskTrackerTests: XCTestCase {
     func testExample() {
         print("test2")
     }
+    
+    func testNewBranch() {
+        print("testNewBranch")
+    }
 
 }
