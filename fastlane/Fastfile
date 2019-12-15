@@ -19,11 +19,9 @@ platform :ios do
   desc "Description of what the lane does"
 
   lane :_run do
+  clean_build_artifacts
+  sh("rm -rf ./output || true")
   clear_derived_data
-  xcclean(
-	scheme: "TaskTracker",
-	workspace: "TaskTracker.xcworkspace"
-)
   cocoapods(use_bundle_exec: false, try_repo_update_on_error: true)
   scan(
     	scheme: "TaskTracker",
